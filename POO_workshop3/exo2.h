@@ -20,8 +20,6 @@ public:
     StockageObjets2D();
     StockageObjets2D(int nombreObjets);
     ~StockageObjets2D();
-    void ajouter(objet2D* nouvelObjet);
-    void ajouter(objet2D* nouvelObjet, int index);
     void afficherInfos() const;
 
     //--------------workshop 4---------------
