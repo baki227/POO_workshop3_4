@@ -17,30 +17,20 @@ StockageObjets2D::~StockageObjets2D() {
     listechainee* current = head;
     while (current != nullptr) {
         listechainee* next = current->next;
-        delete current->donne; 
+        delete current->donnee; 
         delete current;       
         current = next;
     }
 }
 
-void StockageObjets2D::ajouter(objet2D* nouvelObjet) {
-    objets.push_back(nouvelObjet);
-}
-
-void StockageObjets2D::ajouter(objet2D* nouvelObjet, int index) {
-    if (index >= 0 && index <= static_cast<int>(objets.size())) {
-        objets.insert(objets.begin() + index, nouvelObjet);
-    }
-    else {
-        std::cout << "Index invalide. L'objet n'a pas été ajouté." << std::endl;
-    }
-}
 
 void StockageObjets2D::afficherInfos() const {
     for (objet2D* objet : objets) {
         std::cout << objet->afficheInfo() << std::endl;
     }
 }
+//-------------- workshop-4_exo-2-----------------------
+
 
 void StockageObjets2D::ajouterAtHead(objet2D* nouvelObjet) {
     listechainee* newlistechainee = new listechainee{ nouvelObjet, head };
@@ -63,7 +53,7 @@ void StockageObjets2D::ajouterAtTail(objet2D* nouvelObjet) {
 
 void StockageObjets2D::ajouterAtIndex(objet2D* nouvelObjet, int index) {
     if (index < 0) {
-        std::cerr << "Index invalide." << std::endl;
+        std::cout << "Index invalide." << std::endl;
         return;
     }
 
@@ -93,14 +83,14 @@ void StockageObjets2D::ajouterAtIndex(objet2D* nouvelObjet, int index) {
             }
         }
         else {
-            std::cerr << "Index hors limites." << std::endl;
+            std::cout << "Index hors limites." << std::endl;
         }
     }
 }
 
 void StockageObjets2D::supprimerAtIndex(int index) {
     if (index < 0) {
-        std::cerr << "Index invalide." << std::endl;
+        std::cout << "Index invalide." << std::endl;
         return;
     }
 
@@ -109,7 +99,7 @@ void StockageObjets2D::supprimerAtIndex(int index) {
         if (head != nullptr) {
             listechainee* temp = head;
             head = head->next;
-            delete temp->donne;
+            delete temp->donnee;
             delete temp;
             
             if (head == nullptr) {
@@ -117,7 +107,7 @@ void StockageObjets2D::supprimerAtIndex(int index) {
             }
         }
         else {
-            std::cerr << "Liste vide, suppression impossible." << std::endl;
+            std::cout << "Liste vide, UwU" << std::endl;
         }
     }
     else {
@@ -134,7 +124,7 @@ void StockageObjets2D::supprimerAtIndex(int index) {
           
             listechainee* temp = current->next;
             current->next = current->next->next;
-            delete temp->donne;
+            delete temp->donnee;
             delete temp;
      
             if (current->next == nullptr) {
@@ -142,7 +132,7 @@ void StockageObjets2D::supprimerAtIndex(int index) {
             }
         }
         else {
-            std::cerr << "Index hors limites." << std::endl;
+            std::cout << "Index hors limites." << std::endl;
         }
     }
 }
@@ -150,7 +140,7 @@ void StockageObjets2D::supprimerAtIndex(int index) {
 void StockageObjets2D::afficherInfos2() const {
     listechainee* current = head;
     while (current != nullptr) {
-        std::cout << current->donne->afficheInfo() << std::endl;
+        std::cout << current->donnee->afficheInfo() << std::endl;
         current = current->next;
     }
 }

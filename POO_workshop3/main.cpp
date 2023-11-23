@@ -116,9 +116,18 @@ int main() {
     
         stockage.supprimerAtIndex(1);
         cout << "suppression effectuée" << endl;
-      
         stockage.afficherInfos2();
 
+
+
+        stockage.supprimerAtIndex(-1);
+        stockage.supprimerAtIndex(0);
+
+        stockage.supprimerAtIndex(0);
+      
+      
+        stockage.afficherInfos2();
+        
 
         return 0;
    

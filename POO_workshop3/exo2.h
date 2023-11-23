@@ -7,11 +7,9 @@ private:
     std::vector<objet2D*> objets;
 
     struct listechainee {
-        objet2D* donne;
+        objet2D* donnee;
         listechainee* next;
-        listechainee(objet2D* obj, listechainee* nxt) : donne(obj), next(nxt) {}
-
-
+        listechainee(objet2D* obj, listechainee* nxt) : donnee(obj), next(nxt) {}
     };
 
     listechainee* head;
@@ -22,10 +20,11 @@ public:
     StockageObjets2D();
     StockageObjets2D(int nombreObjets);
     ~StockageObjets2D();
-
     void ajouter(objet2D* nouvelObjet);
     void ajouter(objet2D* nouvelObjet, int index);
     void afficherInfos() const;
+
+
     void ajouterAtHead(objet2D* nouvelObjet);
     void ajouterAtTail(objet2D* nouvelObjet);
     void ajouterAtIndex(objet2D* nouvelObjet, int index);
