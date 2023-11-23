@@ -65,7 +65,7 @@ void StockageObjets2D::ajouterAtTail(objet2D* nouvelObjet) {
 
 void StockageObjets2D::ajouterAtIndex(objet2D* nouvelObjet, int index) {
     if (index < 0) {
-        std::cout << "Index invalide." << std::endl;
+        std::cout << "merci d'utiliser un index positif" << std::endl;
         return;
     }
 
@@ -102,7 +102,7 @@ void StockageObjets2D::ajouterAtIndex(objet2D* nouvelObjet, int index) {
 
 void StockageObjets2D::supprimerAtIndex(int index) {
     if (index < 0) {
-        std::cout << "Index invalide." << std::endl;
+        std::cout << "merci d'utiliser un index positif" << std::endl;
         return;
     }
 
@@ -119,7 +119,7 @@ void StockageObjets2D::supprimerAtIndex(int index) {
             }
         }
         else {
-            std::cout << "Liste vide, UwU" << std::endl;
+            std::cout << "Liste vide" << std::endl;
         }
     }
     else {
@@ -144,7 +144,7 @@ void StockageObjets2D::supprimerAtIndex(int index) {
             }
         }
         else {
-            std::cout << "Index hors limites." << std::endl;
+            std::cout << "Tu ne peux pas supprimer le vide :)" << std::endl;
         }
     }
 }

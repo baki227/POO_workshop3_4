@@ -120,7 +120,7 @@ int main() {
 
 
 
-        stockage.supprimerAtIndex(-1);
+        stockage.supprimerAtIndex(1);
         stockage.supprimerAtIndex(0);
 
         stockage.supprimerAtIndex(0);
