@@ -129,7 +129,7 @@ void StockageObjets2D::supprimerAtIndex(int index) {
        
         while (current != nullptr && currentIndex < index - 1) {
             current = current->next;
-            ++currentIndex;
+            currentIndex++;
         }
 
         if (current != nullptr && current->next != nullptr) {
