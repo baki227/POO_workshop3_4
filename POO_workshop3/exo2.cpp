@@ -23,6 +23,18 @@ StockageObjets2D::~StockageObjets2D() {
     }
 }
 
+void StockageObjets2D::ajouter(objet2D* nouvelObjet) {
+    objets.push_back(nouvelObjet);
+}
+
+void StockageObjets2D::ajouter(objet2D* nouvelObjet, int index) {
+    if (index >= 0 && index <= static_cast<int>(objets.size())) {
+        objets.insert(objets.begin() + index, nouvelObjet);
+    }
+    else {
+        std::cout << "Index invalide. L'objet n'a pas été ajouté." << std::endl;
+    }
+}
 
 void StockageObjets2D::afficherInfos() const {
     for (objet2D* objet : objets) {
