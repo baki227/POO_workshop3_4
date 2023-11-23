@@ -109,7 +109,7 @@ int main() {
         StockageObjets2D stockage;
         stockage.ajouterAtHead(obj1);
         stockage.ajouterAtTail(obj2);
-        stockage.ajouterAtHead(obj3);
+        stockage.ajouterAtIndex(obj3, 0);
 
         stockage.afficherInfos2();
 
