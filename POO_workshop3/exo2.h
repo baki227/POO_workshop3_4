@@ -24,7 +24,7 @@ public:
     void ajouter(objet2D* nouvelObjet, int index);
     void afficherInfos() const;
 
-
+    //--------------workshop 4---------------
     void ajouterAtHead(objet2D* nouvelObjet);
     void ajouterAtTail(objet2D* nouvelObjet);
     void ajouterAtIndex(objet2D* nouvelObjet, int index);
